@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable Typing Test</title>
+    <link rel="stylesheet" href="customizableTypingTest.css">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+</head>
+<body>
+    <div id="settings">
+        <div>
+            <button id="punctuationButton" class="disabledButton">Punctuation</button>
+            <button id="numbersButton" class="disabledButton">Numbers</button>
+        </div>
+
+        <hr>
+
+        <div id="durationButtons">
+            <button id="time3SecondsButton" class="disabledButton" data-duration-seconds="3">3s</button>
+            <button id="time15SecondsButton" class="enabledButton" data-duration-seconds="15">15s</button>
+            <button id="time30SecondsButton" class="disabledButton" data-duration-seconds="30">30s</button>
+            <button id="time60SecondsButton" class="disabledButton" data-duration-seconds="60">60s</button>
+            <button id="time120SecondsButton" class="disabledButton" data-duration-seconds="120">120s</button>
+        </div>
+
+        <hr>
+
+        <div>
+            <select id="languageSelect"></select>
+        </div>
+
+        <hr>
+
+        <div>
+            <button id="resetButton" class="disabledButton">Reset</button>
+        </div>
+    </div>
+
+    <p id="timeLeftDisplay">00:15</p>
+    <p id="wpmDisplay"><span id="rawWpmSpan">Raw</span> / <span id="correctCharactersOnlyWpmSpan">Correct-characters-only</span> WPM</p>
+
+    <hr>
+    
+    <br> <br>
+
+    <div id="mainPart">
+        <div id="textToType">
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+    </div>
+
+    <div id="resultsTableDiv">
+        <table id="resultsTable">
+            <tr>
+                <td>Correct characters in end result</td>
+                <td id="correctCharactersInEndResultTd" class="resultTableValueTd"></td>
+            </tr>
+            <tr>
+                <td>Incorrect characters in end result</td>
+                <td id="incorrectCharactersInEndResultTd" class="resultTableValueTd"></td>
+            </tr>
+            <tr>
+                <td>Raw speed</td>
+                <td id="rawWpmTd" class="resultTableValueTd"></td>
+            </tr>
+            <tr>
+                <td>Correct-characters-only speed</td>
+                <td id="correctCharactersOnlyWpmTd" class="resultTableValueTd"></td>
+            </tr>
+            <tr>
+                <td>Accuracy</td>
+                <td id="accuracyTd" class="resultTableValueTd"></td>
+            </tr>
+        </table>
+    </div>
+    <script type="module" src="customizableTypingTest.js"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+:root {
+    --basicTextColor: rgb(140, 140, 140);
+    --basicButtonBackgroundColor: rgb(140, 140, 140);
+    --basicButtonHoverBackgroundColor: rgb(160, 160, 160);
+    --basicButtonActiveBackgroundColor: rgb(180, 180, 180);
+    --highlightColor: rgb(230, 200, 0);
+    --enabledButtonHoverBackgroundColor: rgb(235, 225, 0);
+    --enabledButtonActiveBackgroundColor: rgb(255, 245, 0);
+    --errorColor: rgb(220, 0, 0);
+    --errorBackgroundColor: rgb(140, 30, 30);
+    --bodyBackgroundColor: rgb(45, 45, 45);
+    --basicBorder: 2px solid black;
+}
+
+body {
+    background-color: var(--bodyBackgroundColor);
+    font-family: monospace;
+    letter-spacing: 0.1em;
+}
+
+table {
+    color: var(--basicTextColor);
+}
+
+button, select {
+    font-family: monospace;
+    cursor: pointer;
+    border: var(--basicBorder);
+}
+
+select {
+    background-color: var(--highlightColor);
+    height: fit-content;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+select option {
+    background-color: var(--basicButtonBackgroundColor);
+}
+
+select option:checked {
+    background-color: var(--highlightColor);
+}
+
+hr {
+    border: 2px solid var(--basicTextColor);
+}
+
+.disabledButton {
+    font-family: monospace;
+    background-color: var(--basicButtonBackgroundColor);
+}
+
+.disabledButton:hover {
+    background-color: var(--basicButtonHoverBackgroundColor);
+}
+
+.disabledButton:active {
+    background-color: var(--basicButtonActiveBackgroundColor);
+}
+
+.lockedInput {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.lockedInput:focus {
+    outline: none;
+}
+
+.enabledButton {
+    background-color: var(--highlightColor);
+}
+
+.enabledButton:hover {
+    background-color: var(--enabledButtonHoverBackgroundColor);
+}
+
+.enabledButton:active {
+    background-color: var(--enabledButtonActiveBackgroundColor);
+}
+
+.highlightedCharacter {
+    color: var(--highlightColor);
+}
+
+.mistypedCharacter {
+    color: var(--errorColor);
+    background-color: var(--errorBackgroundColor);
+}
+
+.cursorMarkedCharacter {
+    border-left: 1px solid var(--highlightColor) !important;
+}
+
+.resultTableValueTd {
+    color: var(--highlightColor);
+    text-align: center;
+}
+
+#settings, #resultsTableDiv {
+    display: flex;
+    justify-content: center;
+}
+
+#settings > div {
+    margin: 8px;
+    display: flex;
+    align-items: center;
+}
+
+#settings hr {
+    margin: 0px;
+}
+
+#settings div button {
+    margin: 4px;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+#mainPart {
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    color: var(--basicTextColor);
+}
+
+#mainPart span {
+    border-left: 1px solid var(--bodyBackgroundColor);
+}
+
+#timeLeftDisplay {
+    font-size: xx-large;
+}
+
+#wpmDisplay {
+    font-size: x-large;
+}
+
+#timeLeftDisplay, #wpmDisplay {
+    color: var(--basicTextColor);
+    text-align: center;
+}
+
+#resultsTable {
+    display: none;
+}
+
+#resultsTable td {
+    padding: 8px;
+    border: 2px solid var(--basicTextColor);
+    font-size: x-large;
+}
+
+#settings, #timeLeftDisplay, #mainPart, #wpmDisplay, #languageSelect {
+    user-select: none;
+    -webkit-user-select: none; /* for WebKit-based browsers */
+}
