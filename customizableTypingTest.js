@@ -92,6 +92,9 @@ languageSelect.addEventListener("change", () => {
 });
 
 window.addEventListener("keydown", (event) => {
+    if (event.code === "Space")
+        event.preventDefault();
+    
     if (timerDurationSeconds === 0)
         return;
 
@@ -99,9 +102,6 @@ window.addEventListener("keydown", (event) => {
         backspace(event.ctrlKey);
         return;
     }
-
-    if (event.code === "Space")
-        event.preventDefault();
     
     if (event.key.length !== 1 || !validStrForTextToTypeRegex.test(event.key))
         return;
