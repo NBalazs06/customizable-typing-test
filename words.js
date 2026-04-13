@@ -74,6 +74,6 @@ const unfilteredWords = {
 
 export const words = Object.fromEntries(
     Object.entries(unfilteredWords).map(
-        ([languageName, arr]) => [languageName, arr.filter(word => validStrForTextToTypeRegex.test(word))]
+        ([languageName, arr]) => [languageName, arr.filter(word => word.length <= 16 && validStrForTextToTypeRegex.test(word))]
     )
 );

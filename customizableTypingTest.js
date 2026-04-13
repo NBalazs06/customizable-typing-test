@@ -18,7 +18,7 @@ const accuracyTd = document.getElementById("accuracyTd");
 
 //OTHER GLOBAL DECLARATIONS
 const defaultTypingLanguageOption = "English";
-const minLineLength = 75;
+const minLineLength = 40;
 const cursorBlinkingIntervalTimeMs = 500;
 const singlePunctuationCharacters = [".", ",", ";", ":", "?", "!", " -"];
 const pairedPunctuationCharacters = [["(", ")"], ["[", "]"], ["{", "}"], ["\"", "\""], ["'", "'"]];
@@ -100,6 +100,8 @@ window.addEventListener("keydown", (event) => {
 
     if (event.key === "Backspace") {
         backspace(event.ctrlKey);
+        return;
+    } else if (event.ctrlKey) {
         return;
     }
     

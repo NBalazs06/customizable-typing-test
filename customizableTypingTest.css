@@ -122,7 +122,7 @@ hr {
 }
 
 #mainPart {
-    font-size: xx-large;
+    font-size: 1.4rem;
     display: flex;
     justify-content: center;
     color: var(--basicTextColor);
